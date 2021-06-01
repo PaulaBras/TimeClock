@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css"> 
+  </head>
+  <body translate="no" >
+    <div id="output"></div>
+    <script src='./moment.min.js'></script>
+    <script>
+      var output = document.getElementById("output");
+      var c;
+      setInterval(
+        c = function() {
+          output.innerText = moment().format('HH:mm') + "lcl";
+        }, 1000);
+        c();
+    </script>
+  </body>
+</html>

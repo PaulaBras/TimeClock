@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./stylecmb.css"> 
+  </head>
+  <body translate="no" >
+    <div class="align">
+        <div class="outputs" id="outputUTC"></div> 
+        <br>
+        <div class="outputs" id="outputLCL"></div>
+    </div>
+    <script src='./moment.min.js'></script>
+    <script>
+      var outputUTC = document.getElementById("outputUTC");
+      var outputLCL = document.getElementById("outputLCL");
+      var c;
+      setInterval(
+        c = function() {
+          outputUTC.innerText = moment().utc().format('HHmm') + "Z";
+          outputLCL.innerText = moment().format('HHmm') + "lcl";
+        }, 1000);
+        c();
+    </script>
+  </body>
+</html>
